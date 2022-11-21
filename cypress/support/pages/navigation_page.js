@@ -4,6 +4,11 @@ export default class NavigationPage {
         this.postsLocator = "li a[href='#/posts/']";
         this.tagsLocator = "li a[href='#/tags/']"
         this.settingsOptionLocator = "a[href='#/settings/']" ;
+        this.staffOptionLocator = "a[href='#/staff/']";
+    }
+
+    clickStaffOption=()=>{
+        cy.get(this.staffOptionLocator).first().click();
     }
 
     clickPosts = () => {

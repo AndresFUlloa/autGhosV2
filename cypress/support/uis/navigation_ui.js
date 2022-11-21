@@ -17,5 +17,10 @@ class NavigationUI {
     goToSettings=()=>{
         this.navigationPage.clickSettingsOption();
     }
+
+    goToStaffSettings=()=>{
+        cy.wait(3000);
+        this.navigationPage.clickStaffOption();
+    }
 }
 export default new NavigationUI();
