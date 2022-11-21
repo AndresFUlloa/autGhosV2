@@ -73,7 +73,7 @@ describe('ghost staff tests', function() {
         EditStaffProfileUI.setNewFullName(fullmame);
         EditStaffProfileUI.setNewSlug(slug);
         cy.wait(2000);
-        ScreenshotHelper.takeScreenShot('staff', 'Update_data_of_staff_member', 'StaffSettingsUI', 'Update_data_of_staff_member_2_before');
+        ScreenshotHelper.takeScreenShot('staff', 'Update_data_of_staff_member', 'StaffSettingsUI', 'Update_data_of_staff_member_1_before');
         EditStaffProfileUI.setNewBio(NewBio);
          
         // save data uploaded
