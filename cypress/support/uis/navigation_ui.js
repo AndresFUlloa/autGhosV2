@@ -17,5 +17,22 @@ class NavigationUI {
     goToSettings=()=>{
         this.navigationPage.clickSettingsOption();
     }
+
+    goToStaffSettings=()=>{
+        cy.wait(3000);
+        this.navigationPage.clickStaffOption();
+    }
+    goToWhatsNewOption=()=>{
+        this.navigationPage.clickUserOptions();
+        cy.wait(2000);
+        this.navigationPage.clickWhatIsNewButton();
+    }
+    checkWhatsNewOption=()=>{
+        this.navigationPage.checkWhatsNewOption();
+    }
+
+    goToYourProfileOption=()=>{
+        this.navigationPage.goToYourProfileOption();
+    }
 }
 export default new NavigationUI();

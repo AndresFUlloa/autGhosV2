@@ -1,9 +1,10 @@
 export default class StaffSettingsPage {
     constructor(){
         // send invitation locators
-        this.InvitePeopleButtonLocator="body > div.gh-app > div > main > section > div > header > section > button";
+        //this.InvitePeopleButtonLocator="body > div.gh-app > div > main > section > div > header > section > button";
+        this.InvitePeopleButtonLocator="//span[contains(text(),'Invite people')]";
         this.newStaffInvitationEmailAddress = "input[name=email]";
-        this.newStaffInvitationSendInvitationLocator = "//span[text()='Send invitation now →']";
+        this.   newStaffInvitationSendInvitationLocator = "//span[text()='Send invitation now']";
         // re-sending staff invitation locators
         this.resendOptionLocator= "a[href='#resend']";
         this.resendinvitationNotificationLoc = "//span[contains(text(),'Invitation resent!')]";
@@ -12,14 +13,14 @@ export default class StaffSettingsPage {
         this.revokeInvitationLocator  = "a[href='#revoke']"
         this.revokedInvitationNotificationLoc = "//span[contains(text(),'Invitation revoked')]";
         /// updating staff info locators
-        this.selectActiveUserLocator="a[href*='#/settings/staff/']"
+        this.selectActiveUserLocator="div.apps-grid > div.apps-grid-cell.tooltip-centered"
         
     }
 
     ////invite new people
     
     clickInvitePeopleButton=()=>{
-        cy.get(this.InvitePeopleButtonLocator).click();
+        cy.xpath(this.InvitePeopleButtonLocator).click();
     }
      
     setNewStaffInvitationEmail(email){

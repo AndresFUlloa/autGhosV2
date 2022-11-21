@@ -8,7 +8,7 @@ class ScreenshotHelper{
         UIName,
         fileName,
         element = null) => {
-        var url = `${moduleName}/${testCaseName}/${UIName}/${fileName}`;
+        var url = `${moduleName}/${fileName}`;
         cy.wait(2000);
         if(element == null)
             cy.screenshot(url);
